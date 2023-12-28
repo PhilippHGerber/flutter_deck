@@ -370,8 +370,7 @@ class _SlideBody extends StatelessWidget {
           )
         : child;
 
-    final globalConfiguration = context.flutterDeck.globalConfiguration;
-    final slideSize = globalConfiguration.slideSize;
+    final slideSize = configuration.slideSize;
 
     if (!slideSize.isResponsive) {
       body = ColoredBox(

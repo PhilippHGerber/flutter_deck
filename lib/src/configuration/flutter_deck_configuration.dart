@@ -116,11 +116,13 @@ class FlutterDeckSlideConfiguration extends FlutterDeckConfiguration {
     FlutterDeckHeaderConfiguration? header,
     FlutterDeckProgressIndicator? progressIndicator,
     bool? showProgress,
+    FlutterDeckSlideSize? slideSize,
     FlutterDeckTransition? transition,
   })  : _footerConfigurationOverride = footer,
         _headerConfigurationOverride = header,
         _progressIndicatorOverride = progressIndicator,
         _showProgressOverride = showProgress,
+        _slideSizeOverride = slideSize,
         _transitionOverride = transition;
 
   /// Creates a configuration for a slide. This constructor is used internally
@@ -134,11 +136,13 @@ class FlutterDeckSlideConfiguration extends FlutterDeckConfiguration {
     super.header,
     super.progressIndicator,
     super.showProgress,
+    super.slideSize,
     super.transition,
   })  : _footerConfigurationOverride = null,
         _headerConfigurationOverride = null,
         _progressIndicatorOverride = null,
         _showProgressOverride = null,
+        _slideSizeOverride = null,
         _transitionOverride = null;
 
   /// The route for the slide.
@@ -165,6 +169,7 @@ class FlutterDeckSlideConfiguration extends FlutterDeckConfiguration {
   final FlutterDeckHeaderConfiguration? _headerConfigurationOverride;
   final FlutterDeckProgressIndicator? _progressIndicatorOverride;
   final bool? _showProgressOverride;
+  final FlutterDeckSlideSize? _slideSizeOverride;
   final FlutterDeckTransition? _transitionOverride;
 
   /// Merges the slide configuration with the global configuration. The slide
@@ -182,6 +187,7 @@ class FlutterDeckSlideConfiguration extends FlutterDeckConfiguration {
       progressIndicator:
           _progressIndicatorOverride ?? configuration.progressIndicator,
       showProgress: _showProgressOverride ?? configuration.showProgress,
+      slideSize: _slideSizeOverride ?? configuration.slideSize,
       transition: _transitionOverride ?? configuration.transition,
     );
   }

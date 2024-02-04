@@ -1,3 +1,8 @@
+# 0.11.0
+
+- feat: set scroll position to currently active slide on navigation drawer open
+- fix: FlutterDeckBulletList scaling issues
+
 # 0.10.1
 
 - refactor: rework flutter deck controls
